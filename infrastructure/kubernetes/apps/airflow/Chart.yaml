@@ -4,11 +4,11 @@ dependencies:
 - condition: postgresql.enabled
   name: postgresql
   repository: https://charts.helm.sh/stable
-  version: 15.5.14
+  version: 8.6.4
 - condition: redis.enabled
   name: redis
   repository: https://charts.helm.sh/stable
-  version: 19.6.1
+  version: 10.5.7
 description: Airflow Helm Chart (User Community) - used to deploy Apache Airflow on
   Kubernetes
 home: https://github.com/airflow-helm/charts
@@ -25,4 +25,4 @@ maintainers:
 name: airflow
 sources:
 - https://github.com/airflow-helm/charts/tree/main/charts/airflow
-version: 8.9.0
+version: 8.5.2
