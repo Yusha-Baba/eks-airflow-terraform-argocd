@@ -5,7 +5,7 @@ provider "aws" {
 
 module "vpc" {
     source = "terraform-aws-modules/vpc/aws"
-    version = "3.7.0"
+    version = "5.9.0"
     name = "data_plataform"
     cidr = "192.168.0.0/16"
 

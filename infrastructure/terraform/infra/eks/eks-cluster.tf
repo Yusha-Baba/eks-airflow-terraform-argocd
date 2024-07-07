@@ -1,8 +1,9 @@
 module "eks" {
-  source = "terraform-aws-modules/eks/aws"
+  source          = "terraform-aws-modules/eks/aws"
+  version         = "17.24.0"
 
   cluster_name    = var.eks_cluster_name
-  cluster_version = "1.21"
+  cluster_version = "1.30"
 
   vpc_id          = local.vpc.vpc_id
   subnets         = [local.vpc.private_subnets[0], local.vpc.public_subnets[1]]
@@ -17,7 +18,7 @@ module "eks" {
   worker_groups = [
     {
       name = "worker-group-1"
-      instance_type = "t3.small"
+      instance_type = "m6i.xlarge"
       asg_desired_capacity = 2
       asg_max_size  = 5
       platform = "linux"
