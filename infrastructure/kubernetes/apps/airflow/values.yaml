@@ -1417,6 +1417,9 @@ pgbouncer:
   ##
   safeToEvict: true
 
+  pgbouncer:
+    authType: scram-sha-256
+
   ## configs for the PodDisruptionBudget of the pgbouncer Deployment
   ##
   podDisruptionBudget:
